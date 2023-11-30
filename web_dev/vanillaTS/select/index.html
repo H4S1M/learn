@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>popup</title>
+  </head>
+  <body>
+    <div class="show">
+      <button class="show-btn">Show</button>
+    </div>
+    <div class="popup">
+      <button class="close-btn">x</button>
+      <h2>Log In</h2>
+      <div class="select">
+        <div class="select-1">
+          <div class="select-btn">
+            <span class="btn-text" id="btn-text1">Pilih tipe</span>
+          </div>
+          <ul class="options" id="options1">
+            <li class="option">
+              <span class="option-text">Pemasukan</span>
+            </li>
+            <li class="option">
+              <span class="option-text">Pengeluaran</span>
+            </li>
+          </ul>
+        </div>
+        <div class="select-2">
+          <div class="select-btn">
+            <span class="btn-text" id="btn-text2">Pilih kategory</span>
+          </div>
+          <ul class="options" id="options2">
+            <li class="option">
+              <span class="option-text">nguntal</span>
+            </li>
+            <li class="option">
+              <span class="option-text">travel</span>
+            </li>
+            <li class="option">
+              <span class="option-text">lainnya</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="form-element">
+        <label for="email">Email</label>
+        <input type="text" placeholder="Enter email">
+      </div>
+      <div class="form-element">
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter password">
+      </div>
+      <div class="form-element">
+        <button class="submit-btn">Submit</button>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

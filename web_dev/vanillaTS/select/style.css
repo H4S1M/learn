@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+  background-color: #16161a;
+  min-height: 100dvh;
+}
+
+
+.show .show-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: .25em;
+  border: none;
+  border-radius: .25em;
+  background-color: #7f5af0;
+  color: #fffffe;
+  cursor: pointer;
+}
+
+.popup {
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%,-50%) scale(1.25);
+  background-color: #7f5af0;
+  width: 380px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  transition: opacity 25ms ease-in-out 0ms;
+}
+.popup.active {
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1);
+  opacity: 1;
+}
+@media screen and (max-width: 560px) {
+  .popup {
+    width: calc(100% - 2rem);
+  }
+}
+
+.close-btn {
+  border: none;
+  background-color: transparent;
+  color: #fffffe;
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup h2 {
+  text-align: center;
+  color: #fffffe;
+  font-weight: bolder;
+  margin: 10px 0 20px;
+}
+
+.popup .form-element {
+  margin: 15px 0;
+}
+
+.form-element > label {
+  color: #fffffe;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.form-element input[type="text"], .form-element input[type="password"] {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.form-element .submit-btn {
+  background-color: #2cb67d;
+  color: #fffffe;
+  font-size: 1rem;
+  font-weight: 900;
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+
+.select {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: .8rem;
+}
+
+.select-btn {
+  color: #fffffe;
+  background-color: #2cb67d;
+  padding: .5em;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.options {
+  position: absolute;
+  width: 40%;   /*hard code */
+  margin-top: 10px;
+  background-color: #fffffe;
+  border-radius: 5px;
+  padding: .5em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  display: none;
+}
+.options.active {
+  display: block;
+}
+
+.options li {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  padding: .5em;
+  border-radius: 5px;
+}
+.options li:hover {
+  background-color: #aaa;
+}
