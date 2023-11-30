@@ -1,4 +1,5 @@
 # Get Started
+### For javascript
 ``` bash
 cd to project folder/
 
