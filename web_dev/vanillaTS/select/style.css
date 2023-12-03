@@ -108,10 +108,18 @@ body {
 
 
 .select {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: .8rem;
+display: flex;
+gap: .8rem;
+}
+
+.select-1, .select-2 {
+  flex: 1;
+  width: 100%;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
 }
 
 .select-btn {
@@ -124,7 +132,7 @@ body {
 
 .options {
   position: absolute;
-  width: 40%;   /*hard code */
+  width: 100%;
   margin-top: 10px;
   background-color: #fffffe;
   border-radius: 5px;
